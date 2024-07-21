@@ -28,7 +28,7 @@ struct TestService: LifecycleHandler {
     }
     
     func shutdownAsync(_ application: Application) async {
-        try! await promise.futureResult.get()
+        try! await promise.futureResult.get() // example of waiting some tasks
         print("Test service shutdown finished")
     }
 }
